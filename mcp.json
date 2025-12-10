@@ -1,0 +1,43 @@
+{
+	"name": "local-file-mcp",
+	"version": "0.1.0",
+	"description": "A minimal MCP server exposing file-system tools for LLMs.",
+	"tools": [
+		{
+			"id": "list_files",
+			"route": "/files",
+			"method": "GET",
+			"description": "List files and folders under the configured root"
+		},
+		{
+			"id": "read_file",
+			"route": "/file",
+			"method": "GET",
+			"description": "Read a file's content. Returns UTF-8 text or base64 for binary"
+		},
+		{
+			"id": "write_file",
+			"route": "/file",
+			"method": "POST",
+			"description": "Create or overwrite a file. Accepts JSON with `path`, `content`, `encoding`"
+		},
+		{
+			"id": "append_file",
+			"route": "/file",
+			"method": "PATCH",
+			"description": "Append content to existing file"
+		},
+		{
+			"id": "upload_file",
+			"route": "/upload",
+			"method": "POST",
+			"description": "Upload a binary file via multipart form to a target path"
+		},
+		{
+			"id": "delete_file",
+			"route": "/file",
+			"method": "DELETE",
+			"description": "Delete a file or empty directory"
+		}
+	]
+}

@@ -1,4 +1,4 @@
-from mcp_app import mcp
+from server import mcp
 import os
 
 @mcp.tool()

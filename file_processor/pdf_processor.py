@@ -5,7 +5,6 @@ class PDFProcessor:
     def __init__(self):
         self.max_pages = 3 #Number of max pages to extract
 
-    
 
     def extract_text_only(self, file_path: str) -> Dict[str, str]:
         reader = PdfReader(file_path)  

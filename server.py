@@ -8,6 +8,5 @@ running `python server.py` (which would otherwise execute server as
 from mcp.server.fastmcp import FastMCP
 
 
-mcp = FastMCP("local-file-mcp", json_reponse=True)
-if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+mcp = FastMCP("local-file-mcp",host="0.0.0.0", port=8088)
+
